@@ -7,6 +7,8 @@ pipeline {
         stage('Build Docker Image'){
             steps{
                 sh "docker build . -t nk95/nodeapp:${DOCKER_TAG}"
+                sh "ls"
+                sh "echo ls"
             }
         }
    }
