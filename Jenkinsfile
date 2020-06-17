@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('Build Docker Image'){
             steps{
-                bat "docker build . -t nk95/nodeapp22"
+                sh "docker build . -t nk95/nodeapp22"
                 
             }
         }
