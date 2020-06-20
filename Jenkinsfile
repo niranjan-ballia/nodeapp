@@ -9,7 +9,7 @@ pipeline {
                 sh "docker build . -t nk95/nodeapp:${DOCKER_TAG}"
             }
         }
-        stage('push image'){
+        stage('push image docker'){
             steps{
                 withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerhubpwd')]) {
                     sh "docker login -u nk95 -p ${dockerhubpwd}"
